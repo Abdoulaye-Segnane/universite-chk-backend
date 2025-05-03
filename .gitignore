@@ -32,8 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
-# Protéger application.properties
-/src/main/resources/application.properties
 
 # Fichier .env contenant des variables d'environnement
 .env
