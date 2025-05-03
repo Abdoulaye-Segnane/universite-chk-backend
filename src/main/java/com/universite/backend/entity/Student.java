@@ -11,6 +11,12 @@ import java.time.LocalDate;
 @DiscriminatorValue("STUDENT")
 public class Student extends User {
 
+    @Column(nullable = false)
+    private String nom;
+
+    @Column(nullable = false)
+    private String prenom;
+
     @Column(nullable = false, unique = true)
     private String ine; //  unique
 
@@ -19,4 +25,13 @@ public class Student extends User {
 
     @Column(nullable = true)
     private LocalDate dateNaissance;
+
+    @Column(nullable = false)
+    private String motDePasseInitial;
+
+    @Column(nullable = false)
+    private int anneeBac;
+
+
+
 }

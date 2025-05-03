@@ -11,17 +11,14 @@ import jakarta.validation.constraints.*;
 
 public class RegisterStudentRequest {
 
-    @NotBlank(message = "Le nom d'utilisateur est obligatoire")
-    private String username;
+    @NotBlank(message = "Le nom est obligatoire")
+    private String nom;
 
-    @NotBlank(message = "Le mot de passe est obligatoire")
-    @Size(min = 5, message = "Le mot de passe doit contenir au moins 5 caractères")
-    private String password;
 
-    @Email(message = "Email invalide")
-    private String email;
+    @NotBlank(message = "Le prénom est obligatoire")
+    private String prenom;
+
 
     @Column(nullable = false, unique = true)
-    private String ine; //  unique
-
+    private int anneeBac;
 }
